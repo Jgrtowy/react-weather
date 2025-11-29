@@ -5,8 +5,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home'
 import Favorites from './pages/Favorites'
 import About from './pages/About'
-import NotFound from './components/NotFound'
+import NotFound from './pages/NotFound'
 import Layout from './components/Layout'
+import { ThemeProvider } from './components/ThemeProvider'
 
 let router = createBrowserRouter([
   {
@@ -34,9 +35,11 @@ const rootElement = document.getElementById('root')
 
 if(rootElement) {
     ReactDOM.createRoot(rootElement).render(
-      <React.StrictMode>
-        <RouterProvider router={router} />
-      </React.StrictMode>
+      <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
+        <React.StrictMode>
+          <RouterProvider router={router} />
+        </React.StrictMode>
+      </ThemeProvider>
     ) 
 }
 
