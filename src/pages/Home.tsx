@@ -8,7 +8,7 @@ import TemperatureChart from "@/components/TemperatureChart";
 import { type SearchResult } from "@/components/SearchBar";
 
 const units = "metric"
-const key = `7e780ac4265fd768b39167e356d06bfa`
+const key = import.meta.env.VITE_API_KEY
 
 export default function Home() {
     const [data, setData] = useState<any>(null)
@@ -55,7 +55,7 @@ export default function Home() {
     return (
         <div className="flex gap-4 p-2">
             <div className="flex flex-col gap-4 w-2/8">
-                <MainCard data={data} />
+                <MainCard data={data} location={activeLocation}/>
                 <SecondaryCard data={data} />
             </div>
             <TemperatureChart chartData={chartData} />

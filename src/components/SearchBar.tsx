@@ -9,7 +9,6 @@ export interface SearchResult {
     lon: number
     country: string
     state: string
-
 }
 
 interface SearchBarProps {
@@ -64,7 +63,7 @@ export default function SearchBar({ apiKey, onSelectLocation }: SearchBarProps) 
     }
 
     return (
-        <div className="relative w-full">
+        <div className="w-1/2 relative flex justify-center">
             <Input value={query}
             onChange={e => setQuery(e.target.value)}
             onFocus={() => setIsFocused(true)}

@@ -7,7 +7,6 @@ export default function ThemeToggle() {
     
     const root = document.documentElement
     
-
     function toggleTheme() {
         root.classList.add('theme-transition')
 

@@ -19,8 +19,8 @@ const items = [
     icon: Home,
   },
   {
-    title: "Favorites",
-    url: "/favorites",
+    title: "Bookmarks",
+    url: "/bookmarks",
     icon: Bookmark,
   },
   {
