@@ -28,7 +28,7 @@ export default function LanguageSelector() {
             <DropdownMenuTrigger className="w-full flex items-center justify-bewteen px-3 py-2 rounded-md hover:bg-accent">
                 <div className="flex items-center gap-2">
                     <Globe size={18} />
-                    <span>{currentLabel}</span>
+                    <span className="text-[1rem]">{currentLabel}</span>
                 </div>
             </DropdownMenuTrigger>
 
@@ -38,7 +38,7 @@ export default function LanguageSelector() {
                         key={lang.code}
                         onClick={() => changeLang(lang.code)}
                     >
-                        {lang.label}
+                        <p className="text-[1rem]">{lang.label}</p>
                     </DropdownMenuItem>
                 ))}
             </DropdownMenuContent>

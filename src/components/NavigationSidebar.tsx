@@ -55,6 +55,7 @@ export function NavigationSidebar() {
                                             onClick={() => {
                                                 if (isMobile) toggleSidebar();
                                             }}
+                                            className="text-[1rem]"
                                         >
                                             <item.icon />
                                             {item.title}
